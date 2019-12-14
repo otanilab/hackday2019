@@ -45,7 +45,6 @@ img {
   height: 20px;
   font-size: 14px;
   color: #6c6c6c;
-  display: block;
 }
 </style>
 
