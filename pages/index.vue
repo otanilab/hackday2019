@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 import TrophyList from '~/components/TrophyList.vue'
 export default {
   components: {
