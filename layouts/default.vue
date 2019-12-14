@@ -29,14 +29,12 @@ export default {
   margin: 0;
   padding: 0;
 }
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   color: #707070;
   line-height: 1.5;
 }
-
 article,
 aside,
 footer,
@@ -46,17 +44,14 @@ section,
 main {
   display: block;
 }
-
 img {
   display: block;
   flex: none;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 ol,
 ul {
   list-style: none;
