@@ -1,5 +1,6 @@
 <template>
   <div>
+    <menu-bar />
     <nuxt />
   </div>
 </template>
@@ -40,7 +41,7 @@ header,
 nav,
 section,
 main {
-    display: block;
+  display: block;
 }
 
 img {
@@ -55,7 +56,7 @@ a {
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 button {
