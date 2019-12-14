@@ -13,7 +13,7 @@
         {{ value.taskName }}
       </task-card>
     </ul>
-    <task-form />
+    <task-form @click="registerToDo" />
   </div>
 </template>
 <script>
@@ -49,6 +49,9 @@ export default {
         }
       }
     }
+  },
+  methods: {
+    registerToDo() {}
   }
 }
 </script>
