@@ -7,8 +7,6 @@
   </div>
 </template>
 
-<script></script>
-
 <style>
 /* Noto Sans */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
