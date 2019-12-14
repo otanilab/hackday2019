@@ -59,7 +59,7 @@ export default {
 
 <style scoped>
 nav {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   box-shadow: 0 -3px 6px #00000029;
