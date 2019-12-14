@@ -18,14 +18,14 @@
   overflow: hidden;
   padding: 0;
   width: 345px;
-  height: 247px;
+  height: 297px;
   margin: 54px auto 0 auto;
 }
 .trophy-item {
   list-style: none;
   width: 115px;
-  height: 88px;
-  padding: 6px 8px 0px 8px;
+  height: 99px;
+  padding: 6px 0 0px 0;
   float: left;
   text-align: center;
   flex-direction: column;
