@@ -47,5 +47,15 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/',
+        components: {
+          default: resolve(__dirname, 'pages/home')
+        }
+      })
+    }
   }
 }
