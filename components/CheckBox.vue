@@ -12,7 +12,7 @@
 <script>
 export default {
   props: {
-    checkboxId: { type: Number, required: true },
+    checkboxId: { type: String, required: true },
     niceNum: { type: Number, required: true }
   }
 }
@@ -24,6 +24,7 @@ input[type='checkbox'] {
 }
 
 .checkbox-area {
+  position: relative;
   display: inline-block;
   text-align: center;
 }
@@ -44,7 +45,7 @@ input:checked + label {
 input:checked + label::before {
   content: '';
   position: relative;
-  top: 9px;
+  top: 8px;
   left: 18px;
   display: block;
   width: 17px;
@@ -55,13 +56,17 @@ input:checked + label::before {
 }
 
 .nice-num-area {
-  position: relative;
-  top: -8px;
+  position: absolute;
+  left: 3px;
+  bottom: -10px;
   display: none;
+  min-width: 50px;
+  min-width: 50px;
 }
 
 input:checked ~ .nice-num-area {
   display: inline-flex;
+  justify-content: space-around;
   padding: 2px 5px;
   font-size: 12px;
   background: #fff;
