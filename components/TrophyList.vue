@@ -17,7 +17,7 @@
 .trophy-list {
   overflow: hidden;
   padding: 0;
-  width: 345px;
+  width: 100%;
   height: 297px;
   margin: 54px auto 0 auto;
 }
