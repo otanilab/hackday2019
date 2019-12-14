@@ -3,7 +3,7 @@
     <input
       :id="checkboxId"
       :checked="isChecked"
-      @change="toggleCheckedStatus()"
+      @change="toggleCheckedStatus"
       type="checkbox"
     />
     <label :for="checkboxId"></label>
@@ -19,17 +19,12 @@ export default {
   props: {
     checkboxId: { type: String, required: true },
     niceNum: { type: Number, required: true },
-    done: { type: Boolean, required: true }
-  },
-  data() {
-    return {
-      isChecked: this.done
-    }
+    isChecked: { type: Boolean, required: true }
   },
   methods: {
-    toggleCheckedStatus() {
-      this.isChecked = !this.isChecked
-      this.$emit('change', this.isChecked)
+    toggleCheckedStatus(event) {
+      const { checked } = event.target
+      this.$emit('change', checked)
     }
   }
 }

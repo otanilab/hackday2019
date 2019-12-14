@@ -5,10 +5,10 @@
       <slot></slot>
     </p>
     <check-box
-      @change="change"
+      @change="(isChecked) => $emit('change', isChecked)"
       :checkboxId="taskId"
       :niceNum="niceNum"
-      :done="done"
+      :isChecked="done"
     />
   </li>
 </template>
@@ -30,11 +30,6 @@ export default {
       } else {
         return false
       }
-    }
-  },
-  methods: {
-    change(isChecked) {
-      console.log(isChecked)
     }
   }
 }
