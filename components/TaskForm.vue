@@ -36,7 +36,9 @@ export default {
 </script>
 <style scoped>
 .task-form {
-  width: 345px;
+  position: fixed;
+  bottom: 100px;
+  width: 95%;
 }
 .task-form-row {
   display: flex;
