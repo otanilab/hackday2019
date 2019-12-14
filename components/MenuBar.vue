@@ -62,7 +62,9 @@ nav {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background: #fff;
   box-shadow: 0 -3px 6px #00000029;
+  z-index: 5;
 }
 
 .menu {
