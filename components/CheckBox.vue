@@ -1,10 +1,10 @@
 <template>
   <div class="checkbox-area">
     <input
-      type="checkbox"
       :id="checkboxId"
       :checked="isChecked"
       @change="toggleCheckedStatus()"
+      type="checkbox"
     />
     <label :for="checkboxId"></label>
     <div class="nice-num-area">

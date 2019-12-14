@@ -39,10 +39,7 @@
 <style scoped>
 .profile {
   width: 100%;
-<<<<<<< HEAD
-=======
   margin-top: 70px;
->>>>>>> d3c81f49530c3a907145d7887c1f19d725dfe838
   height: 177px;
   margin-top: 70px;
   border-radius: 5px;
