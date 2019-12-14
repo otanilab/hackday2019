@@ -38,7 +38,8 @@
 
 <style scoped>
 .profile {
-  width: 345px;
+  width: 100%;
+  margin-top: 70px;
   height: 177px;
   border-radius: 5px;
   position: relative;
