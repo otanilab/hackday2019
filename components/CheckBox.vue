@@ -70,7 +70,7 @@ input:checked + label::before {
 .nice-num-area {
   position: absolute;
   left: 3px;
-  bottom: -10px;
+  bottom: -15px;
   display: none;
   min-width: 50px;
   min-width: 50px;
