@@ -14,35 +14,54 @@
 </template>
 
 <style scoped>
-ul.trophy-list {
+.trophy-list {
   overflow: hidden;
   padding: 0;
-  width: 90%;
-  margin: auto;
+  width: 345px;
+  height: 247px;
+  margin: 54px auto 0 auto;
 }
 .trophy-item {
   list-style: none;
-  width: 33.3%;
+  width: 115px;
+  height: 88px;
+  padding: 6px 8px 0px 8px;
   float: left;
   text-align: center;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* 子要素をflexboxにより中央に配置する */
+  align-items: center;
+  border: solid 1px #707070;
 }
 img {
-  width: 50%;
-  margin: 0 25% 0 25%;
+  width: 61px;
+  height: 60px;
+  margin: auto;
   overflow: hidden;
   float: none;
 }
 .tropy-name {
   width: 100%;
+  height: 20px;
+  font-size: 14px;
+  color: #6c6c6c;
 }
 </style>
 
 <script>
+import firebase from 'firebase'
+
 export default {
-  props: { trophyIdList: { type: Array } }
+  props: { trophyIdList: { type: Array } },
+  created() {
+    firebase
+      .firestore()
+      .collection('users')
+      .doc('PfiChwGQrXRfflURXTwq')
+      .get()
+      .then(function(querySnapshot) {
+        console.log(querySnapshot)
+      })
+  }
 }
 </script>
