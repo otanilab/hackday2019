@@ -57,7 +57,7 @@ input + label {
 }
 
 input:checked + label {
-  top: -5px;
+  top: -7px;
   background: #72de93;
 }
 
