@@ -50,19 +50,7 @@ img {
 </style>
 
 <script>
-import firebase from 'firebase'
-
 export default {
-  props: { trophyIdList: { type: Array } },
-  created() {
-    firebase
-      .firestore()
-      .collection('users')
-      .doc('PfiChwGQrXRfflURXTwq')
-      .get()
-      .then(function(querySnapshot) {
-        console.log(querySnapshot)
-      })
-  }
+  props: { trophyIdList: { type: Array } }
 }
 </script>

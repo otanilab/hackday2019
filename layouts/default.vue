@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="inner">
-      <nuxt />
-    </div>
-    <menu-bar></menu-bar>
+    <nuxt />
   </div>
 </template>
 
@@ -27,14 +24,15 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   color: #707070;
   line-height: 1.5;
 }
+
 article,
 aside,
 footer,
@@ -42,19 +40,22 @@ header,
 nav,
 section,
 main {
-  display: block;
+    display: block;
 }
+
 img {
   display: block;
   flex: none;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 button {
