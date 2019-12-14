@@ -52,9 +52,7 @@ export default {
     extendRoutes(routes, resolve) {
       routes.push({
         path: '/',
-        components: {
-          default: resolve(__dirname, 'pages/home')
-        }
+        redirect: { name: 'home' }
       })
     }
   }
