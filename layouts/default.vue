@@ -59,6 +59,7 @@ a {
 ol,
 ul {
   list-style: none;
+  padding: 0;
 }
 
 button {
