@@ -1,0 +1,26 @@
+name: Firebase
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    env:
+      FIREBASE_TOKEN: {{ secrets.FIREBASE_TOKEN }}
+    steps:
+      uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Install firebase CLI
+        run: npm install -g firebase
+      - name: Build nuxt project
+        run: |
+          npm install
+          npm run build
+      - name: Deploy nuxt project
+        run: firebase deploy --token $FIREBASE_TOKEN
+
