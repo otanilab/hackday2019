@@ -39,16 +39,24 @@
 <style scoped>
 .profile {
   width: 100%;
+<<<<<<< HEAD
+=======
   margin-top: 70px;
+>>>>>>> d3c81f49530c3a907145d7887c1f19d725dfe838
   height: 177px;
+  margin-top: 70px;
   border-radius: 5px;
   position: relative;
-  opacity: 80%;
+  background: white;
   box-shadow: 0px 3px 6px #00000029;
 }
 .name-icon {
   position: relative;
   top: -5px;
+}
+
+.name {
+  text-align: center;
 }
 .avatar img {
   top: -50px;

@@ -66,6 +66,8 @@ nav {
 }
 
 .menu {
+  padding: 0;
+  margin: auto;
   display: flex;
   justify-content: space-around;
 }

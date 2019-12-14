@@ -23,7 +23,7 @@
 }
 .trophy-item {
   list-style: none;
-  width: 115px;
+  width: 33.3%;
   height: 99px;
   padding: 6px 0 0px 0;
   float: left;
