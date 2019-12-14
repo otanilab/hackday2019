@@ -33,7 +33,6 @@ export default {
     this.$router.afterEach((to, from) => {
       const currentPass = this.$router.currentRoute.path
       const currentPage = currentPass.replace('/', '')
-      console.log(currentPage)
 
       switch (currentPage) {
         case 'home':
