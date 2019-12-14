@@ -8,5 +8,8 @@ export const state = () => ({
 export const actions = {
   bind: firestoreAction(({ bindFirestoreRef }) => {
     return bindFirestoreRef('list', db.collection('todo'))
+  }),
+  add: firestoreAction((context, task) => {
+    return db.collection('todo').add(task)
   })
 }
