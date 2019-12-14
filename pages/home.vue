@@ -17,6 +17,7 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 import GlobalHeader from '~/components/GlobalHeader'
 import TaskForm from '~/components/TaskForm'
 import TaskCard from '~/components/TaskCard'

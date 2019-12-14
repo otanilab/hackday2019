@@ -3,7 +3,7 @@
     <div class="inner">
       <nuxt />
     </div>
-    <menu-bar></menu-bar>
+    <menu-bar />
   </div>
 </template>
 
@@ -27,7 +27,6 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 body {
