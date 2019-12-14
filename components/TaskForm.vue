@@ -1,7 +1,7 @@
 <template>
   <div class="task-form">
     <div v-if="continueDays" class="task-form-row justify-content-left">
-      <div class="task-form-help">継続{{ continueDays }}</div>
+      <div class="task-form-help">継続設定：{{ continueDays }}日</div>
     </div>
     <div class="task-form-row">
       <input
@@ -73,11 +73,13 @@ export default {
 }
 .task-form-help {
   min-width: 66px;
-  height: 21px;
+  /* height: 21px; */
   border: solid 1px #afafaf;
   margin-bottom: 4px;
-  padding: 1px;
+  margin-left: 5px;
+  padding: 2px 3px;
   color: #6c6c6c;
+  background: #fff;
 }
 .task-form-input {
   outline: none;

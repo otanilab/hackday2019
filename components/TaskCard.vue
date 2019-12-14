@@ -69,6 +69,6 @@ export default {
   background: #e37a7a;
   color: #fff;
   transform: rotate(-45deg);
-  filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(2px 1px 7px rgba(0, 0, 0, 0.3));
 }
 </style>
