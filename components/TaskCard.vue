@@ -1,5 +1,5 @@
 <template>
-  <li class="task-card" :class="isRunningTask ? 'is-running-task' : ''">
+  <li :class="isRunningTask ? 'is-running-task' : ''" class="task-card">
     <div v-if="isRunningTask" class="running-label">{{ runningDays }}日目</div>
     <p class="task-name">
       <slot></slot>
@@ -23,11 +23,6 @@ export default {
     taskId: { type: String, required: true },
     done: { type: Boolean, required: true }
   },
-  methods: {
-    change(isChecked) {
-      console.log(isChecked)
-    }
-  },
   computed: {
     isRunningTask() {
       if (this.runningDays >= 0) {
@@ -35,6 +30,11 @@ export default {
       } else {
         return false
       }
+    }
+  },
+  methods: {
+    change(isChecked) {
+      console.log(isChecked)
     }
   }
 }
