@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="inner">
-      <!-- <nuxt /> -->
-    </div>
+    <!-- <nuxt /> -->
     <menu-bar></menu-bar>
   </div>
 </template>
@@ -69,5 +67,6 @@ button {
 
 .inner {
   width: 95%;
+  margin: 0 auto;
 }
 </style>
