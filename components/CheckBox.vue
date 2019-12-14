@@ -63,9 +63,13 @@ input:checked + label::before {
 input:checked ~ .nice-num-area {
   display: inline-flex;
   padding: 2px 5px;
-  font-size: 14px;
+  font-size: 12px;
   background: #fff;
   border: 1px solid #707070;
   border-radius: 5px;
+}
+
+.nice-num-area img {
+  margin-right: 3px;
 }
 </style>
