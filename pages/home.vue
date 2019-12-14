@@ -2,6 +2,7 @@
   <div>
     <global-header>ホーム</global-header>
     <task-form />
+    {{ taskText }}
   </div>
 </template>
 <script>
