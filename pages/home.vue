@@ -7,6 +7,7 @@
         :taskId="key"
         :niceNum="value.niceNum"
         :runningDays="value.runningDays"
+        :done="value.done"
         :key="key"
       >
         {{ value.taskName }}
@@ -32,9 +33,16 @@ export default {
           timestamp: 20190101,
           runningDays: -1
         },
+        TestcuGSD4TSYQ5tXWX3dLIck522: {
+          niceNum: 89,
+          done: true,
+          taskName: '完了済タスク名',
+          timestamp: 20190101,
+          runningDays: -1
+        },
         Asz1cuGSD4TSYQ5tXWX3dLIck522: {
           niceNum: 120,
-          done: true,
+          done: false,
           taskName: 'タスク名2',
           timestamp: 20190101,
           runningDays: 0

@@ -1,6 +1,11 @@
 <template>
   <div class="checkbox-area">
-    <input type="checkbox" :id="checkboxId" />
+    <input
+      type="checkbox"
+      :id="checkboxId"
+      :checked="isChecked"
+      @change="toggleCheckedStatus()"
+    />
     <label :for="checkboxId"></label>
     <div class="nice-num-area">
       <img src="~/assets/icons/nice-sm.svg" alt="いいねアイコン" />
@@ -13,7 +18,19 @@
 export default {
   props: {
     checkboxId: { type: String, required: true },
-    niceNum: { type: Number, required: true }
+    niceNum: { type: Number, required: true },
+    done: { type: Boolean, required: true }
+  },
+  data() {
+    return {
+      isChecked: this.done
+    }
+  },
+  methods: {
+    toggleCheckedStatus() {
+      this.isChecked = !this.isChecked
+      this.$emit('change', this.isChecked)
+    }
   }
 }
 </script>

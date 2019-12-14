@@ -4,7 +4,12 @@
     <p class="task-name">
       <slot></slot>
     </p>
-    <check-box :checkboxId="taskId" :niceNum="niceNum" />
+    <check-box
+      @change="change"
+      :checkboxId="taskId"
+      :niceNum="niceNum"
+      :done="done"
+    />
   </li>
 </template>
 <script>
@@ -15,11 +20,16 @@ export default {
   props: {
     niceNum: { type: Number, required: true },
     runningDays: { type: Number, required: true },
-    taskId: { type: String, required: true }
+    taskId: { type: String, required: true },
+    done: { type: Boolean, required: true }
+  },
+  methods: {
+    change(isChecked) {
+      console.log(isChecked)
+    }
   },
   computed: {
     isRunningTask() {
-      console.log(this.runningDays)
       if (this.runningDays >= 0) {
         return true
       } else {
