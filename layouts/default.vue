@@ -71,5 +71,6 @@ button {
   width: 95%;
   margin: 0 auto;
   padding-top: 50px;
+  margin-bottom: 160px;
 }
 </style>

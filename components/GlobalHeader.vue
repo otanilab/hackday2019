@@ -6,7 +6,7 @@
 
 <style scoped>
 header {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   background-color: white;
   top: 0;
