@@ -63,9 +63,6 @@ export default {
     updateTaskDone(taskId, done) {
       this.$store.dispatch('tasks/updateDone', { taskId, done })
     }
-  },
-  methods: {
-    registerToDo() {}
   }
 }
 </script>
