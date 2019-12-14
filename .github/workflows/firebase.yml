@@ -9,7 +9,7 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     env:
-      FIREBASE_TOKEN: {{ secrets.FIREBASE_TOKEN }}
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
