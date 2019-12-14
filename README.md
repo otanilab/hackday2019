@@ -2,6 +2,11 @@
 
 > to-do-nice
 
+## 開発注意点
+
+ブランチの切り方
+`features/[コンポーネント名]`
+
 ## Build Setup
 
 ``` bash
