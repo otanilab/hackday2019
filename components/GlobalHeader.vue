@@ -7,6 +7,8 @@
 <style scoped>
 header {
   position: absolute;
+  z-index: 1;
+  background-color: white;
   top: 0;
   left: 0;
   display: flex;

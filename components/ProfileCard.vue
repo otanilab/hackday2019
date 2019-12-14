@@ -38,16 +38,21 @@
 
 <style scoped>
 .profile {
-  width: 345px;
+  width: 100%;
   height: 177px;
+  margin-top: 70px;
   border-radius: 5px;
   position: relative;
-  opacity: 80%;
+  background: white;
   box-shadow: 0px 3px 6px #00000029;
 }
 .name-icon {
   position: relative;
   top: -5px;
+}
+
+.name {
+  text-align: center;
 }
 .avatar img {
   top: -50px;
