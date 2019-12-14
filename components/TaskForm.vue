@@ -5,13 +5,12 @@
     </div>
     <div class="task-form-row">
       <input
-        :value="taskText"
-        @change="$emit('change')"
+        v-model="taskText"
         class="task-form-input"
         type="text"
         placeholder="タスクを入力"
       />
-      <button @click="$emit('click')" class="task-form-btn">
+      <button @click="clickHandler" class="task-form-btn">
         <img src="~/assets/send-plane-line.svg" />
       </button>
     </div>
@@ -20,16 +19,40 @@
 <script>
 export default {
   props: {
-    taskText: { type: String, required: true }
+    // taskText: { type: String, required: true }
+  },
+  data() {
+    return {
+      taskText: ''
+    }
   },
   computed: {
     continueDays() {
       if (this.taskText) {
         const matchResult = this.taskText.match(/^.+:([0-9]+)/)
-        return matchResult ? matchResult[1] : null
+        return matchResult ? Number(matchResult[1]) : null
       } else {
         return null
       }
+    },
+    taskName() {
+      if (this.taskText) {
+        const matchResult = this.taskText.match.match(/(^.+):[0-9]+/)
+        return matchResult ? Number(matchResult[1]) : ''
+      } else {
+        return ''
+      }
+    }
+  },
+  methods: {
+    clickHandler(event) {
+      const task = {
+        done: false,
+        nice: 0,
+        runningdays: this.continueDays || -1,
+        taskname: this.taskText
+      }
+      this.$emit('click', task)
     }
   }
 }

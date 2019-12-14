@@ -1,14 +1,14 @@
 <template>
-  <li class="task-card" :class="isRunningTask ? 'is-running-task' : ''">
+  <li :class="isRunningTask ? 'is-running-task' : ''" class="task-card">
     <div v-if="isRunningTask" class="running-label">{{ runningDays }}日目</div>
     <p class="task-name">
       <slot></slot>
     </p>
     <check-box
-      @change="change"
+      @change="(isChecked) => $emit('change', isChecked)"
       :checkboxId="taskId"
       :niceNum="niceNum"
-      :done="done"
+      :isChecked="done"
     />
   </li>
 </template>
@@ -22,11 +22,6 @@ export default {
     runningDays: { type: Number, required: true },
     taskId: { type: String, required: true },
     done: { type: Boolean, required: true }
-  },
-  methods: {
-    change(isChecked) {
-      console.log(isChecked)
-    }
   },
   computed: {
     isRunningTask() {
