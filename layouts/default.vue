@@ -1,6 +1,8 @@
 <template>
   <div>
-    <!-- <nuxt /> -->
+    <div class="inner">
+      <!-- <nuxt /> -->
+    </div>
     <menu-bar></menu-bar>
   </div>
 </template>
