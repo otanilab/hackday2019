@@ -16,7 +16,11 @@
       :niceNum="niceNum"
       :isChecked="done"
     />
-    <Nicebutton v-else :niceNum="niceNum"></Nicebutton>
+    <Nicebutton
+      v-else
+      :niceNum="niceNum"
+      @click="(nice) => $emit('clickNiceButton', nice)"
+    ></Nicebutton>
   </li>
 </template>
 <script>

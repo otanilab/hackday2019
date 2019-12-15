@@ -1,5 +1,5 @@
 <template>
-  <button class="nicebutton" v-on:click="niceNum += 1">
+  <button @click="$emit('click', niceNum + 1)" class="nicebutton">
     <img src="../assets/icons/thumb-up-line.svg" />
     <span>{{ niceNum }}</span>
   </button>
