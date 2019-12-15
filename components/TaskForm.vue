@@ -50,7 +50,7 @@ export default {
         done: false,
         nice: 0,
         runningdays: this.continueDays || -1,
-        taskname: this.taskText
+        taskname: this.taskText.replace(/\s:[0-9]+/, '')
       }
       this.$emit('click', task)
     }
