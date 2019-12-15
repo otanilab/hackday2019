@@ -2,6 +2,9 @@
   <li :class="isRunningTask ? 'is-running-task' : ''" class="task-card">
     <div v-if="isRunningTask" class="running-label">{{ runningDays }}日目</div>
     <div v-if="isGlobal" class="global-wrapper">
+      <div class="user-prof">
+        <p>User name</p>
+      </div>
       <p class="task-name">
         <slot></slot>
       </p>
@@ -16,7 +19,7 @@
       :niceNum="niceNum"
       :isChecked="done"
     />
-    <Nicebutton v-else :niceNum="niceNum"></Nicebutton>
+    <Nicebutton v-else :niceNum="0"></Nicebutton>
   </li>
 </template>
 <script>
