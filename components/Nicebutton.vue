@@ -1,14 +1,14 @@
 <template>
-  <button class="nicebutton"  v-on:click="counter += 1">
+  <button class="nicebutton" v-on:click="niceNum += 1">
     <img src="../assets/icons/thumb-up-line.svg" />
-    <span>{{ counter }}</span>
+    <span>{{ niceNum }}</span>
   </button>
 </template>
 <script>
 export default {
-	asyncData() {
-	  return { counter: 128 }
-	}
+  props: {
+    niceNum: { type: Number, required: true }
+  }
 }
 </script>
 <style scoped>
@@ -22,8 +22,12 @@ button.nicebutton {
   padding: 0.5em;
 }
 button.nicebutton img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
 }
+
 button.nicebutton span {
-  font-size: 26pt;
+  font-size: 24px;
 }
 </style>

@@ -1,27 +1,36 @@
 <template>
   <li :class="isRunningTask ? 'is-running-task' : ''" class="task-card">
     <div v-if="isRunningTask" class="running-label">{{ runningDays }}日目</div>
-    <p class="task-name">
+    <div v-if="isGlobal" class="global-wrapper">
+      <p class="task-name">
+        <slot></slot>
+      </p>
+    </div>
+    <p v-else class="task-name">
       <slot></slot>
     </p>
     <check-box
+      v-if="!isGlobal"
       @change="(isChecked) => $emit('change', isChecked)"
       :checkboxId="taskId"
       :niceNum="niceNum"
       :isChecked="done"
     />
+    <Nicebutton v-else :niceNum="niceNum"></Nicebutton>
   </li>
 </template>
 <script>
 import CheckBox from '~/components/CheckBox'
+import Nicebutton from '~/components/Nicebutton'
 
 export default {
-  components: { CheckBox },
+  components: { CheckBox, Nicebutton },
   props: {
     niceNum: { type: Number, required: true },
     runningDays: { type: Number, required: true },
     taskId: { type: String, required: true },
-    done: { type: Boolean, required: true }
+    done: { type: Boolean, required: true },
+    isGlobal: { type: Boolean, required: false }
   },
   computed: {
     isRunningTask() {
@@ -69,6 +78,10 @@ export default {
   background: #e37a7a;
   color: #fff;
   transform: rotate(-45deg);
-  filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(2px 1px 7px rgba(0, 0, 0, 0.3));
+}
+
+.global-wrapper {
+  width: 75%;
 }
 </style>

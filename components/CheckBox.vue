@@ -50,7 +50,14 @@ label {
   cursor: pointer;
 }
 
+input + label {
+  position: relative;
+  top: 0;
+  transition: 0.2s;
+}
+
 input:checked + label {
+  top: -7px;
   background: #72de93;
 }
 
@@ -70,7 +77,7 @@ input:checked + label::before {
 .nice-num-area {
   position: absolute;
   left: 3px;
-  bottom: -15px;
+  bottom: -10px;
   display: none;
   min-width: 50px;
   min-width: 50px;
