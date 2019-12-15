@@ -40,5 +40,27 @@ export const actions = {
       .collection('tasks')
       .doc(taskId)
       .update({ done })
+  }),
+  updateNice: firestoreAction(({ state }, { taskId, nice }) => {
+    return db
+      .collection('todo')
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          const docRef = doc.ref
+          doc.ref
+            .collection('tasks')
+            .doc(taskId)
+            .get()
+            .then((doc) => {
+              if (doc.exists) {
+                docRef
+                  .collection('tasks')
+                  .doc(doc.id)
+                  .update({ nice })
+              }
+            })
+        })
+      })
   })
 }
