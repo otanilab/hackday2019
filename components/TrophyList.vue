@@ -7,7 +7,7 @@
         class="trophy-item"
       >
         <img src="@/assets/trophy-fill.svg" />
-        <p class="tropy-name">{{ trophyId }}</p>
+        <p class="tropy-name">{{ trophyId.detail }}</p>
       </li>
     </ul>
   </div>

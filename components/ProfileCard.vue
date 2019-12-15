@@ -1,11 +1,11 @@
 <template>
   <div class="profile">
     <div class="avatar">
-      <img src="~/assets/images/CheckMaker.png" alt="avatar" />
+      <img :src="userProfile.icon" alt="avatar" />
     </div>
     <div class="profile-content">
       <p class="name">
-        山田ホゲもげ
+        {{ userProfile.name }}
         <img
           src="~/assets/icons/trophy-fill-green.svg"
           alt="trophy"
@@ -14,22 +14,24 @@
       </p>
       <ul>
         <li class="num-of-trophy">
-          2
+          {{ tropheyArray.length }}
           <p>
             <img src="~/assets/icons/trophy-fill.svg" />
             <span>トロフィー数</span>
           </p>
         </li>
         <li class="num-of-nice">
-          1,285
+          {{ userProfile['num-of-nice'] }}
           <p>
             <img src="~/assets/icons/thumb-up-line.svg" />
             <span>総いいね数</span>
           </p>
         </li>
         <li class="rank">
-          Gold
-          <span>現在のランク</span>
+          {{ userProfile.grade }}
+          <p>
+            <span>現在のランク</span>
+          </p>
         </li>
       </ul>
     </div>
@@ -95,3 +97,12 @@
   width: 18px;
 }
 </style>
+
+<script>
+export default {
+  props: {
+    userProfile: { type: Object },
+    tropheyArray: { type: Array }
+  }
+}
+</script>
