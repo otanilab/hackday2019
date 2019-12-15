@@ -3,7 +3,8 @@ import firebase from 'firebase'
 import { db } from './db'
 
 export const state = () => ({
-  list: []
+  list: [],
+  globalList: []
 })
 
 export const actions = {
@@ -14,6 +15,12 @@ export const actions = {
         .collection('todo')
         .doc('Qsp1cuGSD4TSYQ5tXWX3dLIck522')
         .collection('tasks')
+    )
+  }),
+  bindGlobal: firestoreAction(({ bindFirestoreRef }) => {
+    return bindFirestoreRef(
+      'globalList',
+      db.collectionGroup('tasks').where('done', '==', true)
     )
   }),
   add: firestoreAction((context, task) => {
